@@ -1,0 +1,2 @@
+C:\Classes\COMP308\Examples\simplenodeapps\SessionTest\obj\Debug\SessionTest.njsprojResolveAssemblyReference.cache
+C:\Classes\COMP308\Examples\simplenodeapps\SessionTest\bin\Microsoft.NodejsTools.WebRole.dll
