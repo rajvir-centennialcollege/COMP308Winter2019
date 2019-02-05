@@ -1,18 +1,18 @@
-﻿//This code uses the CommonJS module pattern to define a function named render()
-//You can require this module and use this function
+﻿//You can require this module and use this function
 //You'll need to use Express routing functionality to utilize the controller
 exports.render = function (req, res) {
+    //read the username from body property of request object
+    var username = req.body.username;
     //make a reference to the session object
     var session = req.session;
-    //store the username in session object
-    session.username = req.body.username;
-    console.log("username in session: " + session.username);
-    res.render('thankyou', {
-        title: 'Thankyou form'
-
-
-    });
-    //res.end('done');
-    
-    
+    //store username in session object
+    session.username = username;
+    console.log("In index function - User name = " + session.username);
+    //check if session object contains the username
+    if (session.username) {
+        res.redirect('feedback');
+    }
+    else {
+        res.render('login', {});
+    }
 };

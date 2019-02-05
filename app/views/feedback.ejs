@@ -1,13 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-<title><%= title %></title>
-</head>
+
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -15,9 +13,16 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
+textarea
+{ width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 button {
-  background-color: #000080;
+  background-color: #000067;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -77,11 +82,11 @@ span.psw {
     <input type="text" placeholder="Enter your last name" name="lname" required>
  
  <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter your valid email id" name="eid" required>
+    <input type="email" placeholder="Enter your valid email id" value=<%=emailSession%> name="eid" disabled required>
 
-    <label for="comments"><b>Your Comments </b></label>
+    <label for="comments"><b>Your Comments: </b></label>
 	<div class = "container">
-    <textarea name="comment"  rows="4" cols="180" form="usrform">Enter text here...</textarea>
+    <textarea name="comment"   form="usrform">Enter text here...</textarea>
  </div>
     <button type="submit" name="submit" value="Submit">Submit</button>
   
